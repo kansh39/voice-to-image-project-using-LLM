@@ -1,0 +1,27 @@
+📊 How It Works
+The Whisper model listens to an audio input and transcribes it into text.
+The transcribed text is used as a prompt for Stable Diffusion.
+The Stable Diffusion model generates an image based on the transcribed text.
+The output image is displayed and saved locally.
+
+⚡ Performance Optimization
+Use CUDA for faster execution on NVIDIA GPUs.
+Reduce memory usage by running models in half-precision (float16).
+For faster inference, use optimized PyTorch versions.
+
+📦 Future Enhancements
+✅ Add a Web Interface (Using Flask or Gradio)
+✅ Allow Real-Time Speech Input (Using a microphone)
+✅ Improve Image Quality (Using ControlNet or Stable Diffusion XL)
+✅ Fine-tune Whisper Model for better speech recognition
+
+🌍 Contributions
+Pull requests are welcome! If you want to improve this project, follow these steps:
+
+Fork the repository.
+Create a new feature branch (git checkout -b feature-name).
+Commit your changes (git commit -m "Add new feature").
+Push to your branch (git push origin feature-name).
+Open a Pull Request on GitHub.
+
+
