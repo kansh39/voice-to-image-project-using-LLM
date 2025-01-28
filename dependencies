@@ -1,0 +1,33 @@
+Install dependencies
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install diffusers transformers accelerate
+
+
+ Usage
+Load the Stable Diffusion model
+from diffusers import StableDiffusionPipeline
+import torch
+
+pipe = StableDiffusionPipeline.from_pretrained("runwayml/stable-diffusion-v1-5", torch_dtype=torch.float16)
+pipe = pipe.to("cuda")
+
+prompt = "A futuristic cityscape at night"
+image = pipe(prompt).images[0]
+image.show()
+
+Implement Whisper for speech-to-text
+import whisper
+
+model = whisper.load_model("base")
+result = model.transcribe("audio.wav")
+print(result["text"])  # Use this text as the prompt for image generation
+
+
+📄 Features
+Convert speech to text using Whisper.
+Generate AI-powered images using Stable Diffusion.
+Fast execution on GPU with PyTorch.
+🛠 Requirements
+Python 3.8+
+NVIDIA GPU (for CUDA support)
+PyTorch, Diffusers, Transformers, Accelerate
